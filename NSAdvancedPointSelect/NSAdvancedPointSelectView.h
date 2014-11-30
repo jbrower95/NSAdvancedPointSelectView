@@ -11,7 +11,7 @@
 
 //this marks the width of the line...
 #define LINE_WIDTH 2
-
+#define LINE_ENABLED true
 /**
   * This class should work with any type of subview with a rectangular bounding box.
   * It allows the user to move slightly towards a selectable item, and 'tentatively' select the item.

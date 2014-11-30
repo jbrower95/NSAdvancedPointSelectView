@@ -110,7 +110,7 @@
 - (void)viewDidMoveToWindow {
     // trackingRect is an NSTrackingRectTag instance variable
     // eyeBox is a region of the view (instance variable)
-    isSelectionVecVisible = YES;
+    isSelectionVecVisible = LINE_ENABLED;
     trackingRect = [self addTrackingRect:[self frame] owner:self userData:NULL assumeInside:NO];
 }
 
