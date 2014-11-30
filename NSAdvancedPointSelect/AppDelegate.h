@@ -10,6 +10,8 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)buttonOne:(id)sender;
+- (IBAction)buttonTwo:(id)sender;
 
 @end
 

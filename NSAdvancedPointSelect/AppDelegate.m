@@ -23,4 +23,12 @@
     // Insert code here to tear down your application
 }
 
+- (IBAction)buttonOne:(id)sender {
+    [[NSAlert alertWithMessageText:@"Hey There (1)" defaultButton:@"Okay" alternateButton:@"Nah" otherButton:@"Meep" informativeTextWithFormat:@"This is just a text, really."] runModal];
+}
+- (IBAction)buttonTwo:(id)sender {
+     [[NSAlert alertWithMessageText:@"Hey There (2)" defaultButton:@"Okay" alternateButton:@"Nah" otherButton:@"Meep" informativeTextWithFormat:@"This is just a text, really."] runModal];
+}
+
+
 @end

@@ -12,6 +12,8 @@
 		D0C227FF1A2A6B9500A1AC1B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C227FE1A2A6B9500A1AC1B /* Images.xcassets */; };
 		D0C228021A2A6B9500A1AC1B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C228001A2A6B9500A1AC1B /* MainMenu.xib */; };
 		D0C2280E1A2A6B9500A1AC1B /* NSAdvancedPointSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2280D1A2A6B9500A1AC1B /* NSAdvancedPointSelectTests.m */; };
+		D0C228191A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C228181A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.m */; };
+		D0C2281D1A2A765500A1AC1B /* NSView+LineIntersect.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C2281C1A2A765500A1AC1B /* NSView+LineIntersect.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,10 @@
 		D0C228071A2A6B9500A1AC1B /* NSAdvancedPointSelectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSAdvancedPointSelectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C2280C1A2A6B9500A1AC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C2280D1A2A6B9500A1AC1B /* NSAdvancedPointSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAdvancedPointSelectTests.m; sourceTree = "<group>"; };
+		D0C228171A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAdvancedPointSelectView.h; sourceTree = "<group>"; };
+		D0C228181A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAdvancedPointSelectView.m; sourceTree = "<group>"; };
+		D0C2281B1A2A765500A1AC1B /* NSView+LineIntersect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+LineIntersect.h"; sourceTree = "<group>"; };
+		D0C2281C1A2A765500A1AC1B /* NSView+LineIntersect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+LineIntersect.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				D0C227FE1A2A6B9500A1AC1B /* Images.xcassets */,
 				D0C228001A2A6B9500A1AC1B /* MainMenu.xib */,
 				D0C227F71A2A6B9500A1AC1B /* Supporting Files */,
+				D0C2281A1A2A6BE400A1AC1B /* NSAdvancedPointSelect */,
 			);
 			path = NSAdvancedPointSelect;
 			sourceTree = "<group>";
@@ -109,6 +116,17 @@
 				D0C2280C1A2A6B9500A1AC1B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0C2281A1A2A6BE400A1AC1B /* NSAdvancedPointSelect */ = {
+			isa = PBXGroup;
+			children = (
+				D0C228171A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.h */,
+				D0C228181A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.m */,
+				D0C2281B1A2A765500A1AC1B /* NSView+LineIntersect.h */,
+				D0C2281C1A2A765500A1AC1B /* NSView+LineIntersect.m */,
+			);
+			name = NSAdvancedPointSelect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C228191A2A6BDE00A1AC1B /* NSAdvancedPointSelectView.m in Sources */,
 				D0C227FD1A2A6B9500A1AC1B /* main.m in Sources */,
 				D0C227FB1A2A6B9500A1AC1B /* AppDelegate.m in Sources */,
+				D0C2281D1A2A765500A1AC1B /* NSView+LineIntersect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
