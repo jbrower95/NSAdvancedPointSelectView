@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NSAdvancedPointSelectView.h"
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
@@ -17,6 +17,18 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    
+    //Initialize the sample!
+    NSAdvancedPointSelectView *pointSelect = (NSAdvancedPointSelectView *)[[self window] contentView];
+
+    NSColor *color = [NSColor colorWithDeviceRed:163/255.0f green:163/255.0f blue:163/255.0f alpha:.5];
+    
+    [pointSelect setPointSelectColor:color];
+    [pointSelect setSelectionLineVisible:NO];
+    [pointSelect setLineWidth:2.0];
+    
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

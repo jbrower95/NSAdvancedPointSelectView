@@ -5,13 +5,13 @@
 //  Created by Justin Brower on 11/29/14.
 //  Copyright (c) 2014 Mediocre Stuff. All rights reserved.
 //
-
 #import <Cocoa/Cocoa.h>
 #import "NSView+LineIntersect.h"
 
 //this marks the width of the line...
-#define LINE_WIDTH 2
-#define LINE_ENABLED true
+#define DEFAULT_LINE_WIDTH 1
+#define DEFAULT_LINE_ENABLED false
+
 /**
   * This class should work with any type of subview with a rectangular bounding box.
   * It allows the user to move slightly towards a selectable item, and 'tentatively' select the item.
@@ -46,11 +46,22 @@
     //tracking rect
     NSTrackingRectTag trackingRect;
     
+    //the color of the highlight / line
+    NSColor *pointSelectColor;
+    
+    //the width of the line to draw
+    float lineWidth;
 }
 
 
 //If set, the view will internally draw the selection line.
 - (void)setSelectionLineVisible:(BOOL)isVisible;
+
+//Sets the color of the line for previewing selection, and the color of the highlight.
+- (void)setPointSelectColor:(NSColor *)color;
+
+//Sets the width of the selection line.
+- (void)setLineWidth:(float)width;
 
 
 @end

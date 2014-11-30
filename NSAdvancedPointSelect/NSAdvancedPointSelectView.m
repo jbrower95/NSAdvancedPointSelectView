@@ -27,7 +27,7 @@
             
             NSBezierPath *path = [NSBezierPath bezierPath];
             [path moveToPoint:mouse];
-            [path setLineWidth:2];
+            [path setLineWidth:lineWidth];
             
             NSPoint endPoint = mouse;
             //progress this point until it's out of view. this is an extremely ineffecient way of finding the point, but whatever.
@@ -57,12 +57,14 @@
     isSelectionVecVisible = isVisible;
 }
 
+//Sets the color of the line for previewing selection, and the color of the highlight.
+- (void)setPointSelectColor:(NSColor *)color {
+    pointSelectColor = color;
+}
 
 - (void)mouseDown:(NSEvent *)theEvent {
-    NSLog(@"Mouse down!");
     
     if ([self hitTest:[theEvent locationInWindow]] == tentativelySelectedView){
-        NSLog(@"Died here.");
         return;
     }
     
@@ -97,10 +99,13 @@
         
         [[NSApplication sharedApplication] postEvent:mevent atStart:YES];
         
-        NSLog(@"Lol");
     }
 }
 
+//Sets the width of the selection line.
+- (void)setLineWidth:(float)width {
+    lineWidth = width;
+}
 
 //Returns the length of the selection vector
 - (float)vecLength {
@@ -110,7 +115,8 @@
 - (void)viewDidMoveToWindow {
     // trackingRect is an NSTrackingRectTag instance variable
     // eyeBox is a region of the view (instance variable)
-    isSelectionVecVisible = LINE_ENABLED;
+    isSelectionVecVisible = DEFAULT_LINE_ENABLED;
+    lineWidth = DEFAULT_LINE_WIDTH;
     trackingRect = [self addTrackingRect:[self frame] owner:self userData:NULL assumeInside:NO];
 }
 
