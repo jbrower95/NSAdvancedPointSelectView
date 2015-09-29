@@ -13,8 +13,6 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    
-    
     if ([self vecLength] > .000005){
         
         NSColor *color = [NSColor colorWithDeviceRed:136/255.0f green:136/255.0f blue:136/255.0f alpha:.5];
@@ -24,7 +22,6 @@
         NSRectFill(tentativelySelectedView.frame);
         
         if (isSelectionVecVisible){
-            
             NSBezierPath *path = [NSBezierPath bezierPath];
             [path moveToPoint:mouse];
             [path setLineWidth:lineWidth];
@@ -49,6 +46,7 @@
             [[NSColor blackColor] set];
             [path stroke];
         }
+        
         
     }
 }

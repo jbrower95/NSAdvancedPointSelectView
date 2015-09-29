@@ -9,8 +9,8 @@
 #import "NSView+LineIntersect.h"
 
 //this marks the width of the line...
-#define DEFAULT_LINE_WIDTH 1
-#define DEFAULT_LINE_ENABLED false
+#define DEFAULT_LINE_WIDTH 3
+#define DEFAULT_LINE_ENABLED true
 
 /**
   * This class should work with any type of subview with a rectangular bounding box.

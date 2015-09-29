@@ -25,7 +25,7 @@
     NSColor *color = [NSColor colorWithDeviceRed:163/255.0f green:163/255.0f blue:163/255.0f alpha:.5];
     
     [pointSelect setPointSelectColor:color];
-    [pointSelect setSelectionLineVisible:NO];
+    [pointSelect setSelectionLineVisible:YES];
     [pointSelect setLineWidth:2.0];
     
     
